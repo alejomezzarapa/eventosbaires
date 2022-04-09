@@ -1,0 +1,81 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(36, 30, 44);
+  color: white;
+}
+
+/* Header */
+header{
+  background-color: white;
+  color: black;
+  margin: 2% 5%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "logo navbar";
+}
+
+.logo{
+  grid-area: logo;
+  text-align: left;
+  margin-left: 10px;
+}
+
+h1{
+  text-align: left;
+  margin-top: 20px;
+}
+
+.navbar{
+  grid-area: navbar;
+}
+
+/* Banner Principal */
+
+@keyframes rotate-center{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+
+.rotate-center{
+  animation:rotate-center .6s ease-in-out both;
+}
+
+.banner {
+  background-image: url(../hullabalooza.jpeg);
+  background-repeat: no-repeat;
+  height: 500px;
+  color: white;
+}
+
+.banner h2 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgba(252, 242, 228, 0.5);
+}
+
+.mensaje {
+  text-align: center;
+}
+/* Footer */
+
+footer{
+  margin-top: 5%;
+  display: flex;
+  background-color: black;
+}
+
+.sectionFooter{
+  text-align: center;
+  margin-top: 15px;
+}
+
+li {
+  list-style: none;
+}
+
+.suscribirse li {
+  margin-top: 5px;
+}
