@@ -26,14 +26,14 @@
                   <a class="nav-link disabled">Lineup</a>
                   <a class="nav-link disabled">About</a>
                   <a class="nav-link disabled">Merch</a>
-                  <a class="nav-link active" onclick="solicitarLugares()" href="#">Ticket</a>
+                  <a class="nav-link active" onclick="abrirFormulario()" href="#">Ticket</a>
                 </div>
               </div>
             </div>
           </nav>
     </header>
 
-    <section class="ventanaFormulario">
+    <section class="ventanaFormulario cerrada">
       <h2 class="tituloFormulario"> Completa el formulario</h2>
       <p class="subtituloFormulario"> Nos vemos en la próxima fecha </p>
      
@@ -63,11 +63,15 @@
             </select>
           </div>
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <input type="checkbox" class="form-check-input" id="check">
             <label class="form-check-label" for="exampleCheck1">acepto terminos y condiciones</label>
           </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="submit" class="btn btn-primary" onclick="cargarSolicitud()">Enviar</button>
+          <button type="submit" class="btn btn-primary" onclick="cerrarFormulario()">Cerrar</button>
         </form>
+        <div>
+          <p class="alertaLugares"></p>
+        </div>
       </div>
    
     </section>

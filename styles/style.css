@@ -42,7 +42,17 @@ h1{
   margin: 0px 25%;
 }
 
+.abierta {
+  display: relative;
+}
 
+.cerrada {
+  display: none;
+}
+
+.alertaLugares {
+  color: rgb(185, 185, 1);
+}
 /* Mensaje */
 .mensaje {
   margin-top: 10px;

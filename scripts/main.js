@@ -1,43 +1,55 @@
-let lugaresDisponibles = 30;
+let lugaresDisponibles = 8;
 let anfitrion;
 const anfitriones = [];
 let mensaje = document.querySelector(".mensaje p"); 
 let solicitar = document.querySelector("#solicitud");
 
-function solicitarLugares () {
-    if (lugaresDisponibles>0 ) {
-        let lugaresSolicitados = prompt ("Ingrese la cantidad de personas que desea invitar al evento")
-        reservarLugares(lugaresDisponibles, lugaresSolicitados);
-        if (lugaresDisponibles >= lugaresSolicitados){
-            lugaresDisponibles = lugaresDisponibles-lugaresSolicitados;
-            agregarAnfitriones (anfitrion);
-            console.log ("Nos quedan " + lugaresDisponibles + " lugares disponibles")
-        }    
-    }
+document.addEventListener('DOMContentLoaded', ()=>{
+    tweets = JSON.parse( localStorage.getItem('anfitriones') )
+} )
+
+let sumatoria = JSON.parse(localStorage.getItem('anfitriones'))
+
+function abrirFormulario () {
+    let formulario = document.querySelector (".ventanaFormulario");
+    formulario.className = "ventanaFormulario abierta"
 }
 
-function reservarLugares (lugaresDisponibles, lugaresSolicitados){
-    if (lugaresDisponibles >= lugaresSolicitados) {
-        console.log ("Los lugares fueron reservados.");
+function cerrarFormulario () {
+    let formulario = document.querySelector (".ventanaFormulario")
+    formulario.className = "ventanaFormulario cerrada"
+}
 
+function cargarSolicitud (){
+    let nombreSolicitud = document.querySelector("#inputName").value;
+    let mailSolicitud = document.querySelector("#inputEmail").value;
+    let lugaresSolicitados = document.querySelector("#disabledSelect").value;
+     if (lugaresDisponibles >= lugaresSolicitados) {
+        lugaresDisponibles = lugaresDisponibles - lugaresSolicitados;
         anfitrion = {
-            nombre: prompt ("Necesitamos registrarte como anfitrion de la lista de invitados, escribe tu nombre") ,
-            telefono: prompt ("Gracias, por último necesitamos tu numero de celular") ,
-            cantidadDeInvitados: lugaresSolicitados , 
+            nombre: nombreSolicitud,
+            mail: mailSolicitud,
+            cantidadDeInvitados: lugaresSolicitados,
         }
-        alert (" Se ha creado la lista de " + anfitrion.cantidadDeInvitados + " invitados a nombre de " + anfitrion.nombre + ", celular: " + anfitrion.telefono);
-
-        return lugaresDisponibles & anfitrion;
-
+        let alerta = document.querySelector(".alertaLugares");
+        let mensajeAlert = ("Reserva exitosa")
+        alerta.innerHTML = mensajeAlert;
+        agregarAnfitriones (anfitrion);
     } else {
-        console.log ("Solicitud cancelada, cantidad de invitados: " + lugaresSolicitados + ". Lugares disponibles: " + lugaresDisponibles + ".");
-        alert ("Lo sentimos, solo tenemos " + lugaresDisponibles + " lugares disponibles.");
+        let alerta = document.querySelector(".alertaLugares");
+        let mensajeAlert = ("Tenemos " + lugaresDisponibles + " lugares disponibles")
+        alerta.innerHTML = mensajeAlert;
     }
 }
 
 function agregarAnfitriones (anfitrion) {
         anfitriones.push (anfitrion);
         console.log (anfitriones[anfitriones.length-1]);
+        sincronizarStorage();
+}
+
+function sincronizarStorage(){
+    localStorage.setItem('anfitriones', JSON.stringify(anfitriones));
 }
 
 let texto = "Has click en Ticket para reservar lugares";
