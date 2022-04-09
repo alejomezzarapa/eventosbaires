@@ -35,6 +35,20 @@ h1{
   grid-area: navbar;
 }
 
+/* Formulario ticket */
+.ventanaFormulario {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50%;
+  margin: 0px 25%;
+}
+
+
+/* Mensaje */
+.mensaje {
+  margin-top: 10px;
+  text-align: center;
+}
+
 /* Banner Principal */
 
 @keyframes rotate-center{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
@@ -56,9 +70,6 @@ h1{
   background-color: rgba(252, 242, 228, 0.5);
 }
 
-.mensaje {
-  text-align: center;
-}
 /* Footer */
 
 footer{
