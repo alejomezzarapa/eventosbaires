@@ -3,6 +3,7 @@ let anfitrion;
 const anfitriones = [];
 let mensaje = document.querySelector(".mensaje p"); 
 let solicitar = document.querySelector("#solicitud");
+const suscripciones = [];
 
 document.addEventListener('DOMContentLoaded', ()=>{
     tweets = JSON.parse( localStorage.getItem('anfitriones') )
@@ -50,6 +51,27 @@ function agregarAnfitriones (anfitrion) {
 
 function sincronizarStorage(){
     localStorage.setItem('anfitriones', JSON.stringify(anfitriones));
+}
+
+function cargarSuscripcion () {
+    let suscripcion = document.querySelector("#emailSuscripcion").value;
+    if (suscripcion != '') {
+    suscripciones.push (suscripcion);
+    console.log (suscripciones);
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Suscripción exitosa',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Debes cargar un correo electrónico para suscribirte',
+          })
+    }
 }
 
 let texto = "Has click en Ticket para reservar lugares";
