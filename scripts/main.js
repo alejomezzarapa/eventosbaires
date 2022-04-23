@@ -77,3 +77,38 @@ function cargarSuscripcion () {
 let texto = "Has click en Ticket para reservar lugares";
 
 mensaje.innerHTML = texto;
+
+let eventos = document.querySelector(".clickeventos");
+eventos.addEventListener('click', ()=> {
+    fetch('datos/eventos.json')
+        .then((evento)=> {
+            return evento.json()
+        })
+        .then((eventoJson)=>{
+            mostrarEventos(eventoJson)
+        })
+        .catch(()=>{
+            console.log("error json")
+        })
+})
+
+function mostrarEventos (eventosJson) {
+    let res = document.querySelector(".eventos");
+
+    let eventohtml = '';
+    
+    eventosJson.forEach(element => {
+        const {nombre, fecha, lugar, capacidad, link} = element; 
+
+        eventohtml += `
+            <div class="evento">    
+                <h3> ${nombre} </h3>
+                <p> ${fecha} </p>
+                <p> ${lugar} </p>
+                <a href="${link}"> ${link} </a>
+            </div>
+            `
+    });
+
+    res.innerHTML = eventohtml;
+}

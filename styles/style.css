@@ -80,6 +80,18 @@ h1{
   background-color: rgba(252, 242, 228, 0.5);
 }
 
+/*Eventos*/
+.eventos {
+  display: flex;
+}
+.evento{
+  width: 30%;
+  margin-left: 10px;
+  background-color: rgba(226, 222, 222, 0.1);
+  border-radius: 25px;
+  padding-left: 15px;
+}
+
 /* Footer */
 
 footer{

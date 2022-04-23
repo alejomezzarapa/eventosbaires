@@ -1,0 +1,25 @@
+[
+    {
+        "nombre": "Lollapalooza",
+        "fecha": "18, 19 y 20 de Marzo",
+        "lugar": "Hipodromo de San Isidro",
+        "capacidad": "100000",
+        "link": "https://www.lollapaloozaar.com/lineup"
+    }, 
+
+    {
+        "nombre": "Creamfields",
+        "fecha": "25, 26, 27 y 28 de Agosto",
+        "lugar": "Costanera Sur",
+        "capacidad": "70000",
+        "link": "https://www.creamfields.com"
+    }, 
+        
+    {
+        "nombre": "Cosquin Rock",
+        "fecha": "12 y 13 de Febrero",
+        "lugar": "Predio del Areródromo de Santa María de Punilla",
+        "capacidad": "120000",
+        "link": "https://cosquinrock.net"
+    }
+]
