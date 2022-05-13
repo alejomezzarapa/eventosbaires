@@ -4,7 +4,8 @@
         "fecha": "18, 19 y 20 de Marzo",
         "lugar": "Hipodromo de San Isidro",
         "capacidad": "100000",
-        "link": "https://www.lollapaloozaar.com/lineup"
+        "link": "https://www.lollapaloozaar.com/lineup",
+        "imagenEvento":"https://images.pexels.com/photos/3807242/pexels-photo-3807242.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     }, 
 
     {
@@ -12,7 +13,8 @@
         "fecha": "25, 26, 27 y 28 de Agosto",
         "lugar": "Costanera Sur",
         "capacidad": "70000",
-        "link": "https://www.creamfields.com"
+        "link": "https://www.creamfields.com",
+        "imagenEvento":"https://images.pexels.com/photos/3052360/pexels-photo-3052360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     }, 
         
     {
@@ -20,6 +22,7 @@
         "fecha": "12 y 13 de Febrero",
         "lugar": "Predio del Areródromo de Santa María de Punilla",
         "capacidad": "120000",
-        "link": "https://cosquinrock.net"
+        "link": "https://cosquinrock.net",
+        "imagenEvento":"https://images.pexels.com/photos/4142403/pexels-photo-4142403.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     }
 ]
